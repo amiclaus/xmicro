@@ -10,7 +10,7 @@
  * hdl_project: <adrv9009zu11eg/adrv2crr_fmc>
  * board_revision: <B>
  *
- * Copyright (C) 2019 Analog Devices Inc.
+ * Copyright (C) 2021 Analog Devices Inc.
  */
 
 #include "zynqmp-adrv9009-zu11eg-revb-adrv2crr-fmc-revb-jesd204-fsm.dts"
@@ -50,7 +50,6 @@
 
 &axi_spi_1 {
 	admv1013_a@0 {
-		label = "CS0";
 		compatible = "adi,admv1013";
 		reg = <0>;
 		spi-max-frequency = <5000000>;
@@ -65,7 +64,6 @@
 	};
 
 	admv1013_b@1 {
-		label = "CS1";
 		compatible = "adi,admv1013";
 		reg = <1>;
 		spi-max-frequency = <5000000>;
@@ -80,7 +78,6 @@
 	};
 
 	admv1014_a@2 {
-		label = "CS2";
 		compatible = "adi,admv1014";
 		reg = <2>;
 		spi-max-frequency = <5000000>;
@@ -96,7 +93,6 @@
 	};
 
 	admv1014_b@3 {
-		label = "CS3";
 		compatible = "adi,admv1014";
 		reg = <3>;
 		spi-max-frequency = <5000000>;
@@ -112,7 +108,6 @@
 	};
 
 	lo_adf5356: adf5356@4 {
-		label = "CS4";
 		#clock-cells = <0>;
 		compatible = "adi,adf5356";
 		reg = <4>;
@@ -125,11 +120,10 @@
 		adi,muxout-level-3v3-enable;
 		adi,mute-till-lock-enable;
 		adi,output-a-power = <3>;
-		adi,output-b-power = <0>;
+		adi,output-b-power = <3>;
 		adi,charge-pump-negative-bleed-enable;
 		adi,power-up-frequency = /bits/ 64 <6800000000>;
 		adi,output-b-enable;
-		adi,clock-shift = <2>;
 		adi,reference-doubler-enable;
 	};
 };
