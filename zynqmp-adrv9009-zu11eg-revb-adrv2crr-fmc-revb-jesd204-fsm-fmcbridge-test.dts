@@ -15,16 +15,6 @@
 
 #include "zynqmp-adrv9009-zu11eg-revb-adrv2crr-fmc-revb-jesd204-fsm.dts"
 
-/ {
-	vcm: fixedregulator@0 {
-		compatible = "regulator-fixed";
-		regulator-name = "vcm";
-		regulator-min-microvolt = <1500000>;
-		regulator-max-microvolt = <1500000>;
-		regulator-boot-on;
-	};
-};
-
 &fpga_axi {
 	axi_i2c_1: i2c@83000000 {
 		#address-cells = <1>;
