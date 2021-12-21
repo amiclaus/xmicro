@@ -94,18 +94,18 @@
 };
 
 &axi_i2c_1 {
-	ad7291_1@2a {
+	ad7291_1@2f {
 		label = "ADC_I2C_1";
 		compatible = "adi,ad7291";
-		reg = <0x2a>;
+		reg = <0x2f>;
 	};
 };
 
 &axi_i2c_2 {
-	ad7291_2@2b {
+	ad7291_2@2f {
 		label = "ADC_I2C_2";
 		compatible = "adi,ad7291";
-		reg = <0x2b>;
+		reg = <0x2f>;
 	};
 };
 
